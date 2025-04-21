@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2 class="mb-3">Hello, {{ user }}!</h2>
+
+{% if role == 'student' %}
+<form method="post" action="/mark">
+    <button type="submit" class="btn btn-success">Mark Today’s Attendance</button>
+</form>
+{% else %}
+<p class="lead">Admin panel coming soon...</p>
+{% endif %}
+{% endblock %}
